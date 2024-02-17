@@ -1,6 +1,6 @@
 import axios from "axios";
 import {toast} from "react-toastify"
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
 export const validateEmail = (email) => {
     return email.match(
@@ -11,7 +11,7 @@ export const validateEmail = (email) => {
 export const registerUser = async (userData) => {
     
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/users/register`, userData, {withCredentials: true})
+        const response = await axios.post(`/api/users/register`, userData, {withCredentials: true})
         console.log(response)
         if(response.statusText === "OK") {
             toast.success("User registered successfully")
@@ -31,7 +31,7 @@ export const loginUser = async (userData) => {
     console.log("service")
     console.log(userData)
     try {
-        const response = await axios.post(`${BACKEND_URL}/api/users/login`, userData, {withCredentials: true})
+        const response = await axios.post(`/api/users/login`, userData, {withCredentials: true})
         console.log("afterURL")
         console.log(response)
         if(response.statusText === "OK") {
@@ -50,7 +50,7 @@ export const loginUser = async (userData) => {
 // Logout user
 export const logoutUser = async () => {
     try {
-        await axios.get(`${BACKEND_URL}/api/users/logout`)
+        await axios.get(`/api/users/logout`)
         
     } catch (error) {
         const message = (
@@ -65,7 +65,7 @@ export const logoutUser = async () => {
 
 export const getLoginStatus = async () => {
     try {
-        const response = await axios.get(`${BACKEND_URL}/api/users/loggedin`)
+        const response = await axios.get(`/api/users/loggedin`)
         return response.data
         
     } catch (error) {

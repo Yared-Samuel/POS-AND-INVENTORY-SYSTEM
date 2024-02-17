@@ -24,10 +24,6 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors({
-  origin: ["http://localhost:3000","http://192.168.1.167:8081" ,"https://inv-app-beyene"],
-  credentials: true
-}));
 app.use(morgan('combined'))
 // Route Middleware
 
@@ -50,7 +46,6 @@ app.get("/", (req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-const HOST = '0.0.0.0'
 // Connect to DB and start server
 
 mongoose
@@ -59,7 +54,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    app.listen(PORT, HOST,() => {
+    app.listen(PORT,() => {
       console.log(`Server runnning on port ${PORT}`);
     });
   })

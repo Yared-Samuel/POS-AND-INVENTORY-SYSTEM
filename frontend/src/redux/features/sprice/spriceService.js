@@ -1,6 +1,6 @@
 import axios from "axios";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
-const API_URL = `${BACKEND_URL}/api/price`
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+const API_URL = `/api/price`
 // Create New sprice
 
 const createSprice = async (formData) => {
@@ -19,7 +19,7 @@ const getSprices = async () =>{
 const updateSprice = async (_id, formData) => {
   try {
     console.log(_id);
-    const response = await axios.put(`${BACKEND_URL}/api/price/${_id}`, formData);
+    const response = await axios.put(`/api/price/${_id}`, formData);
     console.log(response);
     return response.data;
   } catch (error) {

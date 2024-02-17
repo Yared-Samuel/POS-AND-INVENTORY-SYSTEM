@@ -1,6 +1,6 @@
 import axios from "axios";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
-const API_URL_CAT = `${BACKEND_URL}/api/storelist/main`
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+const API_URL_CAT = `/api/storelist/main`
 
 
 const createMainStore = async (formData) => {

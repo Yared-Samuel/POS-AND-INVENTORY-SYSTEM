@@ -1,6 +1,6 @@
 import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
-const API_URL = `${BACKEND_URL}/api/inv/use`
+const API_URL = `/api/inv/use`
 
 const createUse = async(formData) =>{
     const response = await axios.post(API_URL, formData)

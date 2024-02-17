@@ -51,7 +51,7 @@ const registerUser = asyncHandler(async (req, res) => {
     httpOnly: true,
     expires: new Date(Date.now() + 1000 * 86400),  // one day
     sameSite: "none",
-    secure: true
+    // secure: true
   });
 
   if (user) {
@@ -97,7 +97,6 @@ const registerUser = asyncHandler(async (req, res) => {
             //  Generate Token by calling the genereateToken function
 
         const token = generateToken(user._id);
-
         // Send  HTTP-only cookie
 
         res.cookie('token', token, {
@@ -105,7 +104,7 @@ const registerUser = asyncHandler(async (req, res) => {
             httpOnly: true,
             expires: new Date(Date.now() + 1000 * 86400),  // one day
             sameSite: "none",
-            secure: true
+            // secure: true
         });
         // res.json({ token: token });
         if(user && passwordIsCorrect) {
@@ -134,7 +133,7 @@ const registerUser = asyncHandler(async (req, res) => {
             httpOnly: true,
             expires: new Date(0),  // expire now
             sameSite: "none",
-            secure: true,
+            // secure: true,
             
         });
         console.log(res.cookie)

@@ -1,12 +1,12 @@
 import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
-const API_URL = `${BACKEND_URL}/api/storelist/store`
-const API_URL_CAT = `${BACKEND_URL}/api/storelist`
-const API_URL_finished = `${BACKEND_URL}/api/storelist/store/finished`
-const API_URL_raw = `${BACKEND_URL}/api/storelist/store/raw`
-const API_URL_fixed = `${BACKEND_URL}/api/storelist/store/fixed`
-const API_URL_use = `${BACKEND_URL}/api/storelist/store/use`
-const API_URL_others = `${BACKEND_URL}/api/storelist/store/others`
+const API_URL = `/api/storelist/store`
+const API_URL_CAT = `/api/storelist`
+const API_URL_finished = `/api/storelist/store/finished`
+const API_URL_raw = `/api/storelist/store/raw`
+const API_URL_fixed = `/api/storelist/store/fixed`
+const API_URL_use = `/api/storelist/store/use`
+const API_URL_others = `/api/storelist/store/others`
 
 // Create New storelist
 const createStorelist = async (formData) => {

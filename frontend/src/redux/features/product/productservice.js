@@ -1,11 +1,11 @@
 import axios from "axios";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
-const API_URL = `${BACKEND_URL}/api/products`
-const API_URL_finished = `${BACKEND_URL}/api/products/finished`
-const API_URL_raw = `${BACKEND_URL}/api/products/raw`
-const API_URL_fixed = `${BACKEND_URL}/api/products/fixed`
-const API_URL_use = `${BACKEND_URL}/api/products/use`
-const API_URL_other = `${BACKEND_URL}/api/products/other`
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+const API_URL = `/api/products`
+const API_URL_finished = `/api/products/finished`
+const API_URL_raw = `/api/products/raw`
+const API_URL_fixed = `/api/products/fixed`
+const API_URL_use = `/api/products/use`
+const API_URL_other = `/api/products/other`
 
 
 // Create New Product

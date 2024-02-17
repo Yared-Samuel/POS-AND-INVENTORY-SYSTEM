@@ -1,13 +1,13 @@
 import axios from "axios";
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
+// const BACKEND_URL = process.env.REACT_APP_BACKEND_URL
 
-const DAILY_SALE = `${BACKEND_URL}/api/report/sale-daily`
-const DAILY_PURCHASE = `${BACKEND_URL}/api/report/purchase-daily`
-const DAILY_SERVE = `${BACKEND_URL}/api/report/serve-daily`
-const STORE_DAILY_SALE = `${BACKEND_URL}/api/report/store-sale-daily`
-const STORE_BALANCE = `${BACKEND_URL}/api/report/probalance`
-const INV_BALANCE = `${BACKEND_URL}/api/report/mainStoreBalance`
-const CASH_BALANCE = `${BACKEND_URL}/api/report/cashBalance`
+const DAILY_SALE = `/api/report/sale-daily`
+const DAILY_PURCHASE = `/api/report/purchase-daily`
+const DAILY_SERVE = `/api/report/serve-daily`
+const STORE_DAILY_SALE = `/api/report/store-sale-daily`
+const STORE_BALANCE = `/api/report/probalance`
+const INV_BALANCE = `/api/report/mainStoreBalance`
+const CASH_BALANCE = `/api/report/cashBalance`
 
 
 const getDailySale = async (formData)=>{
