@@ -47,7 +47,7 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to DB and start server
 mongoose
-  .connect('mongodb+srv://yaredcode7:6wnFdU20W8gtwVYc@beyeneinv.wogjhiv.mongodb.net/?retryWrites=true&w=majority', {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
